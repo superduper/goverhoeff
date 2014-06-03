@@ -16,7 +16,7 @@ func TestGeneration(t *testing.T) {
 	if _, err := Generate("123456789"); err == nil {
 		t.Error(`Generate("123456789") should return validation error`)
 	}
-	// run all possible combinations
+	// run some combinations
 	for x := 0; x < 100000; x++ {
 		go func() {
 			num, _ := randutil.IntRange(100000000, 99999999)
